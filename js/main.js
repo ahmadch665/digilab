@@ -20,8 +20,12 @@ var fullHeight = function() {
   function setHeight() {
     if ($(window).width() > 768) {
       $('.js-fullheight').css('height', $(window).height());
+      $('.js-fullheight').css('overflow', 'hidden');
     } else {
+      // For mobile devices - allow natural scrolling
       $('.js-fullheight').css('height', 'auto');
+      $('.js-fullheight').css('min-height', $(window).height());
+      $('.js-fullheight').css('overflow', 'visible');
     }
   }
 
