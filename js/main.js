@@ -16,16 +16,18 @@
     scrollProperty: 'scroll'
   });
 
+var fullHeight = function() {
+  if ($(window).width() > 768) {
+    $('.js-fullheight').css('height', $(window).height());
+    $(window).resize(function(){
+      $('.js-fullheight').css('height', $(window).height());
+    });
+  } else {
+    $('.js-fullheight').css('height', 'auto');
+  }
+};
+fullHeight();
 
-	var fullHeight = function() {
-
-		$('.js-fullheight').css('height', $(window).height());
-		$(window).resize(function(){
-			$('.js-fullheight').css('height', $(window).height());
-		});
-
-	};
-	fullHeight();
 
 	// loader
 	var loader = function() {
