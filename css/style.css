@@ -9874,3 +9874,11 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+    
+/* Mobile fix for js-fullheight sections */
+@media (max-width: 768px) {
+  .js-fullheight {
+    height: auto !important;
+    min-height: 100vh; /* taake screen ka kam se kam height ho */
+  }
+}
