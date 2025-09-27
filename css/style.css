@@ -8018,7 +8018,7 @@ a {
   color: #31de79; }
   a:hover, a:focus {
     text-decoration: none;
-    color: #31de79;
+    color: #000;
     outline: none !important; }
 
 h1, h2, h3, h4, h5,
@@ -9498,7 +9498,7 @@ textarea.form-control {
       .blog-entry .text .heading a {
         color: #000000; }
         .blog-entry .text .heading a:hover, .blog-entry .text .heading a:focus, .blog-entry .text .heading a:active {
-          color: #31de79; }
+          color: #a52424; }
   .blog-entry .meta {
     display: inline-block;
     margin-right: 5px;
