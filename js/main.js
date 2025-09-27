@@ -17,17 +17,26 @@
   });
 
 var fullHeight = function() {
-  if ($(window).width() > 768) {
-    $('.js-fullheight').css('height', $(window).height());
-    $(window).resize(function(){
+  function setHeight() {
+    if ($(window).width() > 768) {
       $('.js-fullheight').css('height', $(window).height());
-    });
-  } else {
-    $('.js-fullheight').css('height', 'auto');
+    } else {
+      $('.js-fullheight').css('height', 'auto');
+    }
   }
-};
-fullHeight();
 
+  // Run on page load
+  setHeight();
+
+  // Run on resize / orientation change
+  $(window).resize(function(){
+    setHeight();
+  });
+};
+
+$(document).ready(function(){
+  fullHeight();
+});
 
 	// loader
 	var loader = function() {
